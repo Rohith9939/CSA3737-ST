@@ -1,0 +1,78 @@
+package selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class saveetha {
+
+	public static void main(String[] args) {
+			
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Rohith kumar\\OneDrive\\Desktop\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+						
+		driver.get("https://arms.sse.saveetha.com");
+		WebElement username=driver.findElement(By.id("txtusername"));
+		System.out.println(username);
+	
+		WebElement password=driver.findElement(By.id("txtpassword"));
+		System.out.println(password);
+		
+		WebElement login=driver.findElement(By.name("btnlogin"));
+		System.out.println(login);
+		
+		username.sendKeys("192111728");		
+		password.sendKeys("rohith@1379");
+		login.click();
+
+	}
+}	
+
+
+
+
+
+
+
+
+
+
+
+package selenium;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class chrome
+{
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Rohith kumar\\OneDrive\\Desktop\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.com/");
+	}
+}
+	 
+   
+   
+   
+   
+   
+   
+   package selenium;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class firefox 
+{
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\Rohith kumar\\OneDrive\\Desktop\\Selinium\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.google.com/");
+	}
+}
+	

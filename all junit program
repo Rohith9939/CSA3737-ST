@@ -1,0 +1,270 @@
+package junit;
+
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner;
+class binary
+
+{ 
+	public static void main(String[] args) 
+	{ 
+		Scanner in = new Scanner(System.in);
+		System.out.println("enter a decimal number:");
+		int decimal = in.nextInt(); 
+		String binary = Integer.toBinaryString(decimal); 
+		
+		System.out.println("BINARY IS " + binary); 
+		
+		System.out.print("OCTAL IS "); 
+		System.out.println(Integer.toOctalString(decimal));
+		assertTrue(decimal==20);
+	
+	 }
+}
+
+package junit;
+
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner;
+public class day
+{ 
+	public static void main(String args[]) 
+	{ 
+		int m, year, week, day; 
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the number of days:"); 
+		m = s.nextInt(); 
+		year = m / 365; 
+		assertTrue(2==year);
+		m = m % 365; 
+		System.out.println("No. of years:"+year);
+		week = m / 7;
+		m = m % 7;
+		System.out.println("No. of weeks:"+week); 
+		day = m; 
+		System.out.println("No. of days:"+day); 
+	} 
+}
+
+package junit;
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner;
+
+class factorial
+{
+     public static void main(String[] args)
+     {
+		int i,j,pr=1;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the number to find the factorial:");
+		int n=s.nextInt();
+		if(n<0)
+		{
+		System.out.println("Invalid");
+		}
+		else if(n==0)
+		{
+		System.out.println("1");
+		}
+		else
+		{
+		for(i=n;i>0;i--)
+		{
+		pr=pr*i;
+		}
+		System.out.println("The answer is:"+pr);
+		assertTrue(120==pr);
+        }
+     }
+}
+
+
+
+
+package junit;
+
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner;
+public class leapyear 
+{
+	public static void main(String[] args)
+	{
+	
+	System.out.println("Enter the date/month/year:");
+	Scanner s=new Scanner(System.in);
+	String re=s.next();
+	String[] r=re.split("/",3);
+	int x=Integer.parseInt(r[2]);
+	assertTrue(x==2000);
+	if(x%4==0)
+	{
+	System.out.println("It is an leap year");
+	}
+	else
+	{
+	System.out.println("It is not a leap year:");
+	}
+	}
+}
+
+
+
+
+
+
+
+package junit;
+import java.util.Scanner;
+import static org.junit.Assert.assertTrue;
+public class palindrome
+
+{
+	public static void main(String args[]) 
+	{ 
+		Scanner in = new Scanner(System.in);
+		System.out.println("enter a number:");
+		int r, sum = 0, temp; int n = in.nextInt();
+		temp = n; 
+		while (n > 0) 
+		{
+			r = n % 10; 
+			sum = (sum * 10)+r;
+			n = n / 10;
+		}
+		System.out.println(sum);
+		assertTrue(121==sum);
+		if(temp==sum)
+			System.out.println(sum+" is palindrome number");
+		else
+			System.out.println(sum+" is not palindrome number");
+     } 
+}
+
+
+
+
+
+
+
+
+
+
+
+package junit;
+import static org.junit.Assert.assertEquals;
+import java.util.Scanner; 
+public class reverse 
+{ 
+	public static void main(String[] args)
+{
+	String str; 
+	char ch; 
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a string : "); 
+	str=sc.nextLine();
+	System.out.println("Reverse of a String "+str+" is :"); 
+	for(int j=str.length();j>0;--j)
+	{
+		System.out.print(str.charAt(j-1));
+	    assertEquals("rohithkumar",str);
+	} 
+		
+}
+}
+
+
+package junit;
+
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner;
+class simpleintrest
+
+{
+	public static void main(String[] args)
+	{ 
+		System.out.println("enter the values for P,T,R:");
+		Scanner sc=new Scanner(System.in);
+		float P=sc.nextFloat();  
+		float T=sc.nextFloat(); 
+		float R=sc.nextFloat();
+		float SI = (P * T * R) / 100; 
+		System.out.println("Simple interest = " + SI);
+		assertTrue(2000==SI);
+		}
+}
+
+
+
+package junit;
+
+import static org.junit.Assert.assertTrue;
+import java.util.Scanner; 
+public class squarecube{ 
+public static void main(String[] args) 
+{
+Scanner s=new Scanner(System.in); 
+System.out.println("Enter an number:"); 
+double n=s.nextDouble(); 
+double a=0,b=0; 
+a=n*n; 
+b=n*n*n; 
+System.out.println("The square of number="+a); 
+System.out.println("The square of number="+b);
+assertTrue(a==9);
+assertTrue(b==27); 
+{ 
+System.out.println("Invalid"); 
+}
+}
+}
+
+
+
+
+
+
+package junit;
+
+import static org.junit.Assert.assertEquals;
+import java.util.Scanner;
+public class username {
+public static void main(String [] args)
+{ 
+	Scanner in=new Scanner(System.in); 
+	System.out.println("enter the user name:"); 
+	String str1=in.nextLine(); 
+	System.out.println("Reenter the user name:");
+	String str2=in.nextLine(); 
+	assertEquals(str1,str2);
+}
+}
+
+
+
+
+package junit;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.Scanner;
+ class voting
+ 
+{ 
+public static void main(String[] args) 
+{ 
+int age,shrt;
+Scanner scan = new Scanner(System.in);
+System.out.println(" Please enter your age:");
+age = scan.nextInt(); 
+if(age>=18) 
+{ 
+System.out.println("Welcome to voting system Yo can Vote");
+} 
+else
+{
+shrt= (18 - age);
+System.out.println("Sorry,You can vote after :"+ shrt + " years");
+assertTrue(age>=18);
+} 
+}
+}
+
